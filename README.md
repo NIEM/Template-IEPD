@@ -11,7 +11,7 @@ metadata, XML Schema documents, and documentation.
 
 [![Build Status](https://travis-ci.org/NIEM/Template-IEPD.svg?branch=master)](https://travis-ci.org/NIEM/Template-IEPD)
 
-## This template IEPD contatins
+## This template IEPD contains
 1. NIEM schema subset
   http://reference.niem.gov/niem/specification/model-package-description/3.0/model-package-description-3.0.html#section_4.2
 
