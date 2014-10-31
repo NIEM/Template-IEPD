@@ -9,7 +9,7 @@ http://reference.niem.gov/niem/specification/model-package-description/3.0/model
 The NIEM-MPD specification defines the contents and structure of IEPDs including 
 metadata, XML Schema documents, and documentation.
 
-[![Build Status](https://travis-ci.org/jtmrice/Template-IEPD.svg?branch=master)](https://travis-ci.org/jtmrice/Template-IEPD)
+[![Build Status](https://travis-ci.org/NIEM/Template-IEPD.svg?branch=master)](https://travis-ci.org/NIEM/Template-IEPD)
 
 ## This template IEPD contatins
 1. NIEM schema subset
