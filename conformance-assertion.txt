@@ -1,0 +1,15 @@
+NIEM Conformance Assertion
+
+This NIEM IEPD conforms to the following NIEM specifications:
+# list of URIs that the IEPD conforms to
+http://reference.niem.gov/niem/specification/conformance/3.0/
+http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/
+http://reference.niem.gov/niem/specification/model-package-description/3.0/
+
+mpdURI: http://example.com/template/0.1/
+
+Author: Template Author
+
+Details:
+# Description verification process, tools used, results, and known issues.
+
