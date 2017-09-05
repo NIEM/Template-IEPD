@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template:TemplateExchange 
- xmlns:template="http://example.com/template/1.0/" 
- xmlns:nc="http://release.niem.gov/niem/niem-core/3.0/">
-    <nc:DateTime>2006-05-04T18:13:51.0Z</nc:DateTime>
+		 xmlns:template="http://example.com/template/1.1/" 
+		 xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/" 
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://example.com/template/1.1/ ../xsd/extension/TemplateExtension.xsd">
+  <nc:DateTime>2006-05-04T18:13:51.0Z</nc:DateTime>
 </template:TemplateExchange>

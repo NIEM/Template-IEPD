@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<w:WantList w:release="3.0" w:product="NIEM" w:nillableDefault="true"
-  xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/3.0/"
+<w:WantList w:release="4.0" w:product="NIEM" w:nillableDefault="true"
   xmlns:w="http://niem.gov/niem/wantlist/2.2"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-  xmlns:nc="http://release.niem.gov/niem/niem-core/3.0/">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/4.0/">
   <w:Element w:name="nc:DateRepresentation" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:DateTime" w:isReference="false" w:nillable="false"/>
   <w:Type w:name="niem-xs:anyURI" w:isRequested="true"/>
