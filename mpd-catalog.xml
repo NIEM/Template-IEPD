@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<c:Catalog 
-    xmlns:template="http://example.com/template/1.1/"
+<c:Catalog
+    xmlns:ext="http://example.com/template/1.1/"
     xmlns:c="http://reference.niem.gov/niem/resource/mpd/catalog/3.0/"
-    xmlns:structures="http://release.niem.gov/niem/structures/3.0/"
     xmlns:nc="http://release.niem.gov/niem/niem-core/3.0/"
+    xmlns:structures="http://release.niem.gov/niem/structures/3.0/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://reference.niem.gov/niem/resource/mpd/catalog/3.0/ https://reference.niem.gov/niem/specification/model-package-description/3.0.1/xsd-mpd-catalog/mpd-catalog-3.0.xsd">
-    <c:MPD 
-        c:mpdURI="http://example.com/template/1.1/" 
+    <c:MPD
+        c:mpdURI="http://example.com/template/1.1/"
 				c:mpdClassURIList=
 					"http://reference.niem.gov/niem/specification/model-package-description/3.0/#MPD
 					 http://reference.niem.gov/niem/specification/model-package-description/3.0/#IEPD"
-        c:mpdName="TemplateExchange" 
+        c:mpdName="TemplateExchange"
         c:mpdVersionID="1.1">
         <c:MPDInformation>
-            <c:AuthoritativeSource> 
+            <c:AuthoritativeSource>
                 <nc:EntityOrganization>
                     <nc:OrganizationName>TEMPLATE ORGANIZATION</nc:OrganizationName>
                     <nc:OrganizationPrimaryContactInformation>
@@ -29,16 +29,16 @@
             <nc:DescriptionText>
                 An IEP class for a timestamped exchange.
             </nc:DescriptionText>
-            <c:HasDocumentElement c:qualifiedNameList="template:TemplateExchange"/>
+            <c:HasDocumentElement c:qualifiedNameList="ext:TemplateExchange"/>
             <c:XMLSchemaValid>
-                <c:XMLCatalog c:pathURI="xsd/niem/xml-catalog.xml"/>
+                <c:XMLCatalog c:pathURI="base-xsd/niem/xml-catalog.xml"/>
             </c:XMLSchemaValid>
-            <c:IEPSampleXMLDocument c:pathURI="iep-samples/exchange-sample.xml"/>
+            <c:IEPSampleXMLDocument c:pathURI="iep-sample/exchange-sample.xml"/>
         </c:IEPConformanceTarget>
         <c:ReadMe c:pathURI="README.md"/>
         <c:MPDChangeLog c:pathURI="changelog.txt"></c:MPDChangeLog>
-        <c:Wantlist c:pathURI="xsd/niem/wantlist.xml"/>
+        <c:Wantlist c:pathURI="base-xsd/niem/wantlist.xml"/>
         <c:ConformanceAssertion c:pathURI="conformance-assertion.txt"/>
-        <c:ExtensionSchemaDocument c:pathURI="xsd/extension/TemplateExtension.xsd"/>
+        <c:ExtensionSchemaDocument c:pathURI="base-xsd/extension/extension.xsd"/>
      </c:MPD>
 </c:Catalog>
