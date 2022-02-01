@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://release.niem.gov/niem/domains/emergencyManagement/5.0/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.0/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xs:annotation>
+    <xs:documentation>Emergency Management</xs:documentation>
+    <xs:appinfo>
+      <appinfo:LocalTerm term="Cat-C" definition="FEMA Category C: Roads and Bridges"/>
+      <appinfo:LocalTerm term="Cat-D" definition="FEMA Category D: Water Control Facilities"/>
+      <appinfo:LocalTerm term="Cat-E" definition="FEMA Category E: Buildings and Equipment"/>
+      <appinfo:LocalTerm term="Cat-F" definition="FEMA Category F: Utilities"/>
+      <appinfo:LocalTerm term="Cat-G" definition="FEMA Category G: Parks, Recreation, and Other"/>
+      <appinfo:LocalTerm term="CATG" definition="FEMA Category G: Parks, Recreation, and Other"/>
+      <appinfo:LocalTerm term="Decon" literal="Decontamination"/>
+      <appinfo:LocalTerm term="EMS" literal="Emergency Medical Service"/>
+      <appinfo:LocalTerm term="EOC" literal="Emergency Operations Center"/>
+      <appinfo:LocalTerm term="EPM" literal="Emergency Protective Measures"/>
+      <appinfo:LocalTerm term="ESF" literal="Emergency Support Function"/>
+      <appinfo:LocalTerm term="FEMA" literal="Federal Emergency Management Agency"/>
+      <appinfo:LocalTerm term="FIPS" literal="Federal Information Processing Standards"/>
+      <appinfo:LocalTerm term="FIPS201" definition="FIPS 201 is a United States federal government standard that specifies Personal Identity Verification requirements for Federal employees and contractors."/>
+      <appinfo:LocalTerm term="Geo" literal="geo-coded"/>
+      <appinfo:LocalTerm term="ICD" literal="International Classification of Diseases"/>
+      <appinfo:LocalTerm term="IEC" literal="International Electrotechnical Commission"/>
+      <appinfo:LocalTerm term="IMS" literal="Incident Management System"/>
+      <appinfo:LocalTerm term="LCR" literal="License, certificate or registration"/>
+      <appinfo:LocalTerm term="MF" literal="Multi-family"/>
+      <appinfo:LocalTerm term="MH" literal="Manufactured home"/>
+      <appinfo:LocalTerm term="NIST" literal="National Institute of Standards and Technology"/>
+      <appinfo:LocalTerm term="NISTSP800733" definition="NIST Special Publication 800-73-3 Interfaces for Personal Identity Verification"/>
+      <appinfo:LocalTerm term="NPI" literal="National Provider ID"/>
+      <appinfo:LocalTerm term="NRCS" literal="Natural Resources Conservation Service"/>
+      <appinfo:LocalTerm term="OBGYN" literal="Obstetrics &amp; Gynecology"/>
+      <appinfo:LocalTerm term="Passcode" definition="A numeric password."/>
+      <appinfo:LocalTerm term="PHEOC" literal="Public Health Emergency Operations Centers"/>
+      <appinfo:LocalTerm term="PIV" literal="Personal Identity Verification"/>
+      <appinfo:LocalTerm term="PSAP" literal="Public Safety Answering Point"/>
+      <appinfo:LocalTerm term="RGB" literal="Red Green Blue"/>
+      <appinfo:LocalTerm term="SOP" literal="Standard Operating Procedures"/>
+      <appinfo:LocalTerm term="SP" literal="Special Publication"/>
+      <appinfo:LocalTerm term="URN" literal="Uniform Resource Name"/>
+      <appinfo:LocalTerm term="USACE" literal="United States Army Corps of Engineers"/>
+      <appinfo:LocalTerm term="X509" definition="X.509 is a standard defining the format of public key certificates."/>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:element name="TechnologySteward" type="nc:PersonType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A person responsible for understanding and addressing technology needs.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

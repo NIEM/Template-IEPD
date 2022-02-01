@@ -1,40 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema
-  targetNamespace="http://example.com/template/1.1/" version="1"
-  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/#ExtensionSchemaDocument"
-  xmlns:ext="http://example.com/template/1.1/"
-  xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/"
-  xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/4.0/"
-  xmlns:structures="http://release.niem.gov/niem/structures/4.0/"
-  xmlns:appinfo="http://release.niem.gov/niem/appinfo/4.0/"
+  targetNamespace="http://acme.org/iepds/macguffin-report/extension/1.2/" version="1" xml:lang="en-US"
+  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ExtensionSchemaDocument"
+  xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
   xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xmlns:ext="http://acme.org/iepds/macguffin-report/extension/1.2/"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
+  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:annotation>
-    <xs:documentation>This extension schema defines a very basic example message and reuses an element from NIEM Core 4.0.</xs:documentation>
+    <xs:documentation>This extension schema defines new components that can be used in the query and response message schemas.  (NOTE: Alternately, this schema could be used to define all additional components, including the root element and type of the message(s) themselves, instead of splitting those off into separate schemas.)</xs:documentation>
   </xs:annotation>
 
-  <xs:import schemaLocation="../niem/niem-core/4.0/niem-core.xsd" namespace="http://release.niem.gov/niem/niem-core/4.0/"/>
-  <xs:import schemaLocation="../niem/proxy/xsd/4.0/xs.xsd" namespace="http://release.niem.gov/niem/proxy/xsd/4.0/"/>
-  <xs:import schemaLocation="../niem/utility/structures/4.0/structures.xsd" namespace="http://release.niem.gov/niem/structures/4.0/"/>
+  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem/xsd/niem-core.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="../niem/xsd/niem-xs.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../niem/xsd/utility/structures.xsd"/>
 
-  <xs:element name="TemplateExchange" type="ext:TemplateExchangeType">
+  <xs:element name="MacGuffinID" type="niem-xs:string">
     <xs:annotation>
-      <xs:documentation>A sample exchange.</xs:documentation>
+      <xs:documentation>An identifier of a MacGuffin.</xs:documentation>
     </xs:annotation>
   </xs:element>
 
-  <xs:complexType name="TemplateExchangeType">
+  <xs:element name="MacGuffin" type="ext:MacGuffinType">
     <xs:annotation>
-      <xs:documentation>A data type for a sample exchange.</xs:documentation>
+      <xs:documentation>An activity that is necessary to the plot and the motivation of the example, but insignificant, unimportant, or irrelevant in itself.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name='MacGuffinType'>
+    <xs:annotation>
+      <xs:documentation>A data type for an activity that is necessary to the plot and the motivation of the example, but insignificant, unimportant, or irrelevant in itself.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType">
+      <xs:extension base='nc:ActivityType'>
         <xs:sequence>
-          <xs:element ref="nc:DateTime"/>
+          <xs:element ref='ext:MacGuffinID' minOccurs='1' maxOccurs='1'/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+
+  <xs:element name="ReportCollector" type="nc:PersonType" substitutionGroup="nc:ReportAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>A person to whom a report must be submitted for collection.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
 
 </xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qry:MacGuffinQuery
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:qry="http://acme.org/iepds/macguffin-report/query/1.2/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://acme.org/iepds/macguffin-report/query/1.2/ ../base-xsd/extension/query.xsd">
+
+  <nc:ActivityIdentification>
+    <nc:IdentificationID>5678</nc:IdentificationID>
+  </nc:ActivityIdentification>
+
+</qry:MacGuffinQuery>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+  targetNamespace="http://acme.org/iepds/macguffin-report/response/1.2/" version="1" xml:lang="en-US"
+  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ExtensionSchemaDocument"
+  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.0/"
+  xmlns:ext="http://acme.org/iepds/macguffin-report/extension/1.2/"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:res="http://acme.org/iepds/macguffin-report/response/1.2/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:annotation>
+    <xs:documentation>This schema defines a MacGuffin report, which...</xs:documentation>
+  </xs:annotation>
+
+  <xs:import namespace="http://acme.org/iepds/macguffin-report/extension/1.2/" schemaLocation="./extension.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem/xsd/niem-core.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/domains/emergencyManagement/5.0/" schemaLocation="../niem/xsd/domains/emergencyManagement.xsd"/>
+
+  <xs:element name='MacGuffinReport' type='res:MacGuffinReportType'>
+    <xs:annotation>
+      <xs:documentation>A report documenting an activity that is necessary to the plot and the motivation of the example, but insignificant, unimportant, or irrelevant in itself.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name='MacGuffinReportType'>
+    <xs:annotation>
+      <xs:documentation>A data type for a report documenting an activity that is necessary to the plot and the motivation of the example, but insignificant, unimportant, or irrelevant in itself.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base='nc:ReportType'>
+        <xs:sequence>
+          <xs:element ref='ext:MacGuffin' minOccurs='1' maxOccurs='1'/>
+          <xs:element ref='em:TechnologySteward' minOccurs='0' maxOccurs='unbounded'/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+</xs:schema>

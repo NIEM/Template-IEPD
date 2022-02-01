@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<res:MacGuffinReport
+  xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.0/"
+  xmlns:ext="http://acme.org/iepds/macguffin-report/extension/1.2/"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:res="http://acme.org/iepds/macguffin-report/response/1.2/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://acme.org/iepds/macguffin-report/response/1.2/ ../base-xsd/extension/response.xsd">
+
+  <nc:ReportAssignee>
+    <nc:PersonName>
+      <nc:PersonFullName>Bugs Bunny</nc:PersonFullName>
+    </nc:PersonName>
+  </nc:ReportAssignee>
+
+  <nc:ReportID>1234</nc:ReportID>
+
+  <ext:ReportCollector>
+    <nc:PersonName>
+      <nc:PersonFullName>Tweety</nc:PersonFullName>
+    </nc:PersonName>
+  </ext:ReportCollector>
+
+  <ext:MacGuffin>
+    <nc:ActivityIdentification>
+      <nc:IdentificationID>5678</nc:IdentificationID>
+    </nc:ActivityIdentification>
+    <nc:ActivityDate>
+      <nc:Date>2022-01-31</nc:Date>
+    </nc:ActivityDate>
+    <nc:ActivityDescriptionText>Wacky hijinks</nc:ActivityDescriptionText>
+    <ext:MacGuffinID>whats-up-doc</ext:MacGuffinID>
+  </ext:MacGuffin>
+
+  <em:TechnologySteward>
+    <nc:PersonName>
+      <nc:PersonFullName>Marvin the Martian</nc:PersonFullName>
+    </nc:PersonName>
+  </em:TechnologySteward>
+
+</res:MacGuffinReport>

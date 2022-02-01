@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<w:WantList w:release="4.0" w:product="NIEM" w:nillableDefault="true"
-  xmlns:w="http://niem.gov/niem/wantlist/2.2"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/4.0/">
-  <w:Element w:name="nc:DateRepresentation" w:isReference="false" w:nillable="true"/>
-  <w:Element w:name="nc:DateTime" w:isReference="false" w:nillable="false"/>
-  <w:Type w:name="niem-xs:anyURI" w:isRequested="true"/>
-  <w:Type w:name="niem-xs:boolean" w:isRequested="true"/>
-  <w:Type w:name="niem-xs:dateTime" w:isRequested="true"/>
-  <w:Type w:name="niem-xs:decimal" w:isRequested="true"/>
-  <w:Type w:name="niem-xs:integer" w:isRequested="true"/>
-  <w:Type w:name="niem-xs:nonNegativeInteger" w:isRequested="true"/>
-  <w:Type w:name="niem-xs:string" w:isRequested="true"/>
-  <w:Type w:name="niem-xs:token" w:isRequested="true"/>
-  <w:Type w:name="xs:anyURI" w:isRequested="true"/>
-  <w:Type w:name="xs:dateTime" w:isRequested="true"/>
-  <w:Type w:name="xs:token" w:isRequested="true"/>
+<w:WantList w:release="5.0" w:product="NIEM" w:nillableDefault="true"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:w="http://niem.gov/niem/wantlist/2.2" xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.0/">
+  <w:Element w:name="em:TechnologySteward" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:Date" w:isReference="false" w:nillable="false"/>
+  <w:Type w:name="nc:ActivityType" w:isRequested="true">
+    <w:ElementInType w:name="nc:ActivityIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+    <w:ElementInType w:name="nc:ActivityDate" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+    <w:ElementInType w:name="nc:ActivityDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+    <w:ElementInType w:name="nc:ActivityAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:DateType" w:isRequested="false">
+    <w:ElementInType w:name="nc:DateRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:IdentificationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:IdentificationID" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:PersonNameType" w:isRequested="false">
+    <w:ElementInType w:name="nc:PersonFullName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:PersonType" w:isRequested="false">
+    <w:ElementInType w:name="nc:PersonName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:ReportType" w:isRequested="true">
+    <w:ElementInType w:name="nc:ReportAssignee" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+    <w:ElementInType w:name="nc:ReportID" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+    <w:ElementInType w:name="nc:ReportAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
 </w:WantList>

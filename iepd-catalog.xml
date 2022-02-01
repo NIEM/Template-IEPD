@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c:IEPDCatalog
+  xmlns:c="http://reference.niem.gov/niem/resource/iepd/catalog/5.0/"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:qry="http://acme.org/iepds/macguffin-report/query/1.2/"
+  xmlns:res="http://acme.org/iepds/macguffin-report/response/1.2/"
+  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+  xsi:schemaLocation="http://reference.niem.gov/niem/resource/iepd/catalog/5.0/ https://reference.niem.gov/niem/specification/model-package-description/5.0/iepd-catalog-schema/iepd-catalog.xsd"
+
+  c:iepdName="IEPD NAME"
+  c:iepdVersionID="1.1"
+  c:iepdURI="http://example.com/template/1.1/"
+  c:iepdConformanceTargetIdentifierURIList="https://niem.github.io/MPD-Spec/v5.0/niem-iepd-spec.html#definition_information_exchange_package_documentation">
+
+  <nc:DescriptionText>GENERAL IEPD DESCRIPTION</nc:DescriptionText>
+
+  <c:IEPDInformation>
+    <c:AuthoritativeSource>
+      <nc:EntityOrganization>
+        <nc:OrganizationName>ACME Inc</nc:OrganizationName>
+        <nc:OrganizationPrimaryContactInformation>
+          <nc:ContactEmailID>smith@acme.mail.org</nc:ContactEmailID>
+          <nc:ContactWebsiteURI>URL</nc:ContactWebsiteURI>
+          <nc:ContactEntity>
+            <nc:EntityPerson>
+              <nc:PersonName>
+                <nc:PersonFullName>John Smith</nc:PersonFullName>
+              </nc:PersonName>
+            </nc:EntityPerson>
+          </nc:ContactEntity>
+        </nc:OrganizationPrimaryContactInformation>
+      </nc:EntityOrganization>
+    </c:AuthoritativeSource>
+
+    <c:CreationDate>2014-10-20</c:CreationDate>
+    <c:LastRevisionDate>2022-01-31</c:LastRevisionDate>
+    <c:StatusText>Alpha</c:StatusText>
+    <c:KeywordText>KEYWORD1</c:KeywordText>
+    <c:KeywordText>KEYWORD2</c:KeywordText>
+    <c:DomainText>DOMAIN/SUBECT AREA RELATED TO THE INFORMATION EXCHANGE (NOT NECESSARILY NIEM DOMAIN USED IN THE SUBSET)</c:DomainText>
+    <c:ExchangePatternText>e.g., query/response</c:ExchangePatternText>
+    <c:ExchangePartnerName>PARTNER1</c:ExchangePartnerName>
+    <c:ExchangePartnerName>PARTNER2</c:ExchangePartnerName>
+  </c:IEPDInformation>
+
+  <c:IEPConformanceTarget structures:id="query">
+    <nc:DescriptionText>An IEP class for a MacGuffin query message.</nc:DescriptionText>
+    <c:HasDocumentElement c:qualifiedNameList="qry:MacGuffinQuery"/>
+    <c:XMLSchemaValid>
+      <c:XMLSchemaDocument c:pathURI="base-xsd/extension/query.xsd"/>
+    </c:XMLSchemaValid>
+    <c:IEPSampleXMLDocument c:pathURI="iep-sample/sample-query.xml"/>
+  </c:IEPConformanceTarget>
+
+  <c:IEPConformanceTarget structures:id="response">
+    <nc:DescriptionText>An IEP class for a MacGuffin response message.</nc:DescriptionText>
+    <c:HasDocumentElement c:qualifiedNameList="res:MacGuffinReport"/>
+    <c:XMLSchemaValid>
+      <c:XMLSchemaDocument c:pathURI="base-xsd/extension/response.xsd"/>
+    </c:XMLSchemaValid>
+    <c:IEPSampleXMLDocument c:pathURI="iep-sample/sample-response.xml"/>
+  </c:IEPConformanceTarget>
+
+  <c:ConformanceAssertion c:pathURI="conformance-assertion.md"/>
+  <c:Documentation c:pathURI="documentation/notes.md"/>
+  <c:ExtensionSchemaDocument c:pathURI="base-xsd/extension/extension.xsd"/>
+  <c:ExtensionSchemaDocument c:pathURI="base-xsd/extension/query.xsd"/>
+  <c:ExtensionSchemaDocument c:pathURI="base-xsd/extension/response.xsd"/>
+  <c:IEPDChangeLog c:pathURI="changelog.md"></c:IEPDChangeLog>
+  <c:IEPSampleXMLDocument c:pathURI="iep-sample/sample-query.xml"/>
+  <c:IEPSampleXMLDocument c:pathURI="iep-sample/sample-response.xml"/>
+  <c:ReadMe c:pathURI="README.md"/>
+  <c:SchemaDocumentSet c:pathURI="base-xsd/niem/">
+    <nc:DescriptionText>NIEM subset schemas</nc:DescriptionText>
+  </c:SchemaDocumentSet>
+  <c:Wantlist c:pathURI="base-xsd/niem/xsd/wantlist.xml"/>
+  <c:XMLCatalog c:pathURI="base-xsd/extension/xml-catalog.xml"/>
+
+</c:IEPDCatalog>

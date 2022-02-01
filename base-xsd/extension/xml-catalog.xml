@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd">
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://acme.org/iepds/macguffin-report/extension/1.2/" uri="./extension.xsd"/>
+  <uri name="http://acme.org/iepds/macguffin-report/query/1.2/" uri="./query.xsd"/>
+  <uri name="http://acme.org/iepds/macguffin-report/response/1.2/" uri="./response.xsd"/>
+  <nextCatalog catalog="../niem/xsd/xml-catalog.xml"/>
+</catalog>
